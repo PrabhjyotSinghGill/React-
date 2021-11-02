@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
-const element = <h1>Hello World</h1>
-ReactDOM.render(<React.StrictMode>
-  <App/>
-</React.StrictMode>, document.getElementById('root'));
+function sayHello(){
+  for (var i=0; i < 5; i++){
+    console.log(i);
+  }
+}
+sayHello();
