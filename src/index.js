@@ -1,6 +1,6 @@
-function sayHello(){
-  for (var i=0; i < 5; i++){
-    console.log(i);
-  }
+const square = function(number){
+  return number * number;
 }
-sayHello();
+
+const square = (number) => number*number;
+console.log(square(5));
