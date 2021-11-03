@@ -1,6 +1,12 @@
-const first = {name:'Mosh'};
-const second = {job:'Instructor'};
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-const combined = {...first,...second, location:'Australia'};
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-console.log(combined);
