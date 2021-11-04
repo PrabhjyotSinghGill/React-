@@ -4,7 +4,7 @@ class Counter extends Component {
     state={
         count:0,
         logo:"favicon.ico",
-        tags:['0','1','2','3']
+        tags:['counter1',]
     };
 
     /*constructor(){
@@ -22,7 +22,7 @@ class Counter extends Component {
 
         return <ul>{this.state.tags.map(tag => <li key={tag}>
             <img className="m-1" src={this.state.logo} alt="" height="25em"></img>
-            <span style={{fontSize:10}} className={this.getBadgeClasses(tag)}>{tag}</span>
+            <span style={{fontSize:10}} className={this.getBadgeClasses(this.state.count)}>{this.formatCount()}</span>
             <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
             </li>)}</ul>;
     }
