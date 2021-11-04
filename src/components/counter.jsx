@@ -7,12 +7,12 @@ class Counter extends Component {
         tags:['0','1','2','3']
     };
 
-    constructor(){
+    /*constructor(){
         super();
         this.handleIncrement = this.handleIncrement.bind(this);
-    }
+    }*/
 
-    handleIncrement(){
+    handleIncrement = () => {
         console.log('Increment Clicked');
     }
 
