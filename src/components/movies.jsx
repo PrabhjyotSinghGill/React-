@@ -11,6 +11,8 @@ class Movies extends React.Component {
                     <th></th>
                     <th></th>
                     <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thread>
         </table>
