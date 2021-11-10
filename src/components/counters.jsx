@@ -12,7 +12,9 @@ class Counters extends React.Component {
     };
     render() { 
         return <div className="counters">
-            {this.state.counters.map(counter => <Counter key={counter.id} value={counter.value} selected></Counter>)}            
+            {this.state.counters.map(counter => <Counter key={counter.id} value={counter.value} selected>
+                <h4>Title</h4>
+            </Counter>)}            
         </div>;
     }
 }
