@@ -12,8 +12,8 @@ class Counters extends React.Component {
         ]
     };
 
-    handleDelete = () => {
-        console.log("Event Handler Called");
+    handleDelete = (counterId) => {
+        console.log("Event Handler Called", counterId);
     };
 
     /*Props includes data that we pass to a component. Props are Read only.*/
