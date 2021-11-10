@@ -32,14 +32,15 @@ class Counter extends Component {
                 this.handleIncrement({id:1});
                 }
             }    
-            className="btn btn-success btn-sm m-2">+</button>
+            className="btn btn-dark btn-sm m-2">+</button>
             <button 
             onClick={
                 () =>{
                 this.handleDecrement({id:1});
                 }
             }    
-            className="btn btn-danger btn-sm m-2">-</button>
+            className="btn btn-dark btn-sm m-2">-</button>
+            <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
             </li>)}</ul>;
     }
 

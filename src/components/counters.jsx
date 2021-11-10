@@ -11,10 +11,15 @@ class Counters extends React.Component {
             {id:4, value:0},
         ]
     };
+
+    handleDelete = () => {
+        console.log("Event Handler Called");
+    };
+
     /*Props includes data that we pass to a component. Props are Read only.*/
     render() { 
         return <div className="counters">
-            {this.state.counters.map(counter => <Counter key={counter.id} value={counter.value} id={counter.id} selected >
+            {this.state.counters.map(counter => <Counter key={counter.id} onDelete={this.handleDelete} value={counter.value} id={counter.id} selected >
             </Counter>)}            
         </div>;
     }
