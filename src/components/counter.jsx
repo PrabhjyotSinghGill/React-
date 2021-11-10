@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state={
-        count:0,
-        logo:"favicon.ico",
+        value:this.props.value,
         tags:[0]
     };
 
@@ -13,20 +12,19 @@ class Counter extends Component {
     }*/
 
     handleIncrement = product => {
-        this.setState({count: this.state.count+1});
+        this.setState({value: this.state.value+1});
     }
 
     handleDecrement = product =>{
-        this.state.count > 0 ? this.setState({count:this.state.count-1}) : this.setState({count:this.state.count});
+        this.state.value > 0 ? this.setState({value:this.state.value-1}) : this.setState({value:this.state.value});
     }
 
     renderTags(){
-        console.log('props',this.props);
         if(this.state.tags.length === 0) return <p>'Add Tags!'</p>;
 
         return <ul>{this.state.tags.map(tag => <li key={tag}>
             {/*<img className="m-1" src={this.state.logo} alt="" height="25em"></img>*/}
-            <span style={{fontSize:10}} className={this.getBadgeClasses(this.state.count)}>{this.formatCount()}</span>
+            <span style={{fontSize:10}} className={this.getBadgeClasses(this.state.value)}>{this.formatCount()}</span>
             <button 
             onClick={
                 () =>{
@@ -57,7 +55,7 @@ class Counter extends Component {
     }
 
     formatCount(){
-        const {count:ct} =this.state;
+        const {value:ct} =this.state;
         return ct === 0? "Zero": ct;
     }
 }
