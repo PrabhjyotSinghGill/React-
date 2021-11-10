@@ -24,7 +24,7 @@ class Counter extends Component {
         if(this.state.tags.length === 0) return <p>'There are no Tags!'</p>;
 
         return <ul>{this.state.tags.map(tag => <li key={tag}>
-            <img className="m-1" src={this.state.logo} alt="" height="25em"></img>
+            {/*<img className="m-1" src={this.state.logo} alt="" height="25em"></img>*/}
             <span style={{fontSize:10}} className={this.getBadgeClasses(this.state.count)}>{this.formatCount()}</span>
             <button 
             onClick={
