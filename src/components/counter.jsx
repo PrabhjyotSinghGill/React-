@@ -4,7 +4,7 @@ class Counter extends Component {
     state={
         count:0,
         logo:"favicon.ico",
-        tags:['counter1',]
+        tags:[0]
     };
 
     /*constructor(){
@@ -21,7 +21,8 @@ class Counter extends Component {
     }
 
     renderTags(){
-        if(this.state.tags.length === 0) return <p>'There are no Tags!'</p>;
+        console.log('props',this.props);
+        if(this.state.tags.length === 0) return <p>'Add Tags!'</p>;
 
         return <ul>{this.state.tags.map(tag => <li key={tag}>
             {/*<img className="m-1" src={this.state.logo} alt="" height="25em"></img>*/}
