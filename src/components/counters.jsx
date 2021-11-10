@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Counter from './counter';
 
 class Counters extends React.Component {
+    /*State includes data that is local to a component */
     state ={
         counters:[
             {id:1, value:0},
@@ -10,10 +11,10 @@ class Counters extends React.Component {
             {id:4, value:0},
         ]
     };
+    /*Props includes data that we pass to a component */
     render() { 
         return <div className="counters">
-            {this.state.counters.map(counter => <Counter key={counter.id} value={counter.value} selected>
-                <h4>Counter #{counter.id}</h4>
+            {this.state.counters.map(counter => <Counter key={counter.id} value={counter.value} id={counter.id} selected >
             </Counter>)}            
         </div>;
     }

@@ -24,7 +24,7 @@ class Counter extends Component {
 
         return <ul>{this.state.tags.map(tag => <li key={tag}>
             {/*<img className="m-1" src={this.state.logo} alt="" height="25em"></img>*/}
-            {this.props.children}
+            <h4>Counter #{this.props.id}</h4>
             <span style={{fontSize:10}} className={this.getBadgeClasses(this.state.value)}>{this.formatCount()}</span>
             <button 
             onClick={
