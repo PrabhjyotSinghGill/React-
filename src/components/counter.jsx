@@ -16,6 +16,9 @@ class Counter extends Component {
         this.setState({count: this.state.count+1});
     }
 
+    handleDecrement = product =>{
+        this.state.count > 0 ? this.setState({count:this.state.count-1}) : this.setState({count:this.state.count});
+    }
 
     renderTags(){
         if(this.state.tags.length === 0) return <p>'There are no Tags!'</p>;
@@ -29,7 +32,14 @@ class Counter extends Component {
                 this.handleIncrement({id:1});
                 }
             }    
-            className="btn btn-secondary btn-sm">Increment</button>
+            className="btn btn-secondary btn-sm m-2">+</button>
+            <button 
+            onClick={
+                () =>{
+                this.handleDecrement({id:1});
+                }
+            }    
+            className="btn btn-secondary btn-sm m-2">-</button>
             </li>)}</ul>;
     }
 
