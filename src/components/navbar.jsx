@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 
 function Navbar(){
-    return <div className="navbar"></div>
+    return (
+        <nav className="navbar navbar-dark bg-dark">
+            <a className="navbar-brand" href="#">
+                Navbar
+            </a>
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;
