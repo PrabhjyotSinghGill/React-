@@ -9,8 +9,7 @@ class Counter extends Component {
     /*constructor(){
         super();
         this.handleIncrement = this.handleIncrement.bind(this);
-    }*/
-
+    }
     handleIncrement = product => {
         this.setState({value: this.state.value+1});
     }
@@ -18,6 +17,7 @@ class Counter extends Component {
     handleDecrement = product =>{
         this.state.value > 0 ? this.setState({value:this.state.value-1}) : this.setState({value:this.state.value});
     }
+    */
 
     renderTags(){
         if(this.state.tags.length === 0) return <p>'Add Tags!'</p>;
